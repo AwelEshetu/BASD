@@ -7,7 +7,7 @@ To run the app locally:
   source ./venv/bin/activate
   
  3. install dependecies from requirements
-   pip install -r requirements. tx
+   pip install -r requirements.txt
  
  4. run the app
     python app.py

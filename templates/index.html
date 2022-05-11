@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resource allocator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+    </head>
+    <body>
+      <h1 class="text-center">Predict resource group based on fault report</h1>
+      <div class="container">
+        <form class="p-3 text-center" action="/" method="post" enctype="application/x-www-form-urlencoded">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Your email..">
+      
+          <label for="subject">Fault</label>
+          <textarea id="subject" name="subject" placeholder="Write the fault.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+              
+        </form>
+      </div>
+      <div class="mt-5">
+        {% if prediction %}
+          <p class="text-center"> <strong>Assignment group for the case is <em>{{prediction}}</em></strong></p>
+        {% endif %}
+      </div>
+      
+    </body>
+</html>

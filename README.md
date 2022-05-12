@@ -11,3 +11,4 @@ To run the app locally:
  
  4. run the app
     python app.py
+![demo_locally_2](https://user-images.githubusercontent.com/4153683/168136607-cb8ac1bc-fab6-4dac-9409-09cc3ff0cce6.gif)
